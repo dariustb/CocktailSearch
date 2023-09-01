@@ -1,0 +1,17 @@
+# Install Just the Docs template
+markdown: kramdown
+remote_theme: just-the-docs/just-the-docs
+
+# Site settings
+title: Cocktail Recipe Book
+
+# Aux links for the upper right navigation
+aux_links:
+  "Cocktail Recipe Book on GitHub":
+    - "//github.com/dariustb/RecipeBook"
+
+# Callouts (warning and notes)
+callouts:
+  warning:
+    title: Warning
+    color: red
