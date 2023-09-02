@@ -42,6 +42,7 @@ _Please [refer to the documentation][docs] for the full breakdown and logic expl
 ### Prerequisites
 * [Python 3][python] (3.11.0 or greater)
   * [pip 3][python] (versions 22.3 - 23.0.1)
+* [npm][npm] (9.5.1 or greater)
 
 ### Install Dependencies
 ```sh
@@ -76,6 +77,7 @@ pylint src/ tests/
 <!-- Technologies -->
 [vscode]:   https://code.visualstudio.com/
 [python]:   https://www.python.org/
+[npm]:      https://www.npmjs.com/
 
 <!-- Featured images -->
 [product-screenshot]:   #
