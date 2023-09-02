@@ -165,3 +165,6 @@ sqlite3.exe
 
 # Tailwind generated files
 src/css/output.css
+
+# npm stuff
+node_modules/
