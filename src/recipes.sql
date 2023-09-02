@@ -1,0 +1,61 @@
+-- This file generates the database with the Cocktail information in it
+
+-- Create cocktails table
+CREATE TABLE cocktails (
+  id INTEGER PRIMARY KEY,
+  name VARCHAR(30)
+);
+
+-- Populate table with drinks
+INSERT INTO cocktails (id, name)
+VALUES
+(1, 'Old Fashioned'),
+(2, 'Negroni'),
+(3, 'Daiquiri'),
+(4, 'Dry Martini'),
+(5, 'Margarita'),
+(6, 'Espresso Martini'),
+(7, 'Whiskey Sour'),
+(8, 'Manhattan'),
+(9, 'Aperol Spritz'),
+(10, 'Mojito'),
+(11, 'Bloody Mary'),
+(12, 'Gimlet'),
+(13, 'Moscow Mule'),
+(14, 'Penicillin'),
+(15, "Dark 'n Stormy"),
+(16, 'Corpse Reviver'),
+(17, 'Clover Club'),
+(18, 'Boulevardier'),
+(19, 'Mai Tai'),
+(20, 'Sazerac'),
+(21, 'French 75'),
+(22, 'Paloma'),
+(23, 'Pisco Sour'),
+(24, 'Vieux Carre'),
+(25, 'Americano'),
+(26, 'Amaretto Sour'),
+(27, 'Rum Old Fashioned'),
+(28, 'Gin Fizz'),
+(29, 'Bramble'),
+(30, 'Brandy Crusta'),
+(31, 'Bellini'),
+(32, 'Pina Colada'),
+(33, 'Porn Star Martini'),
+(34, 'Sidecar'),
+(35, 'Aviation'),
+(36, 'Irish Coffee'),
+(37, 'Last Word'),
+(38, "Tommy's Margarita"),
+(39, 'Bamboo'),
+(40, 'Tom Collins'),
+(41, 'Caipirinha'),
+(42, 'Vodka Martini'),
+(43, 'Hanky Panky'),
+(44, 'Zombie'),
+(45, 'Cosmopolitan'),
+(46, 'El Diablo'),
+(47, 'White Lady'),
+(48, 'Gin Gin Mule'),
+(49, 'Long Island Iced Tea'),
+(50, 'Jungle Bird');
