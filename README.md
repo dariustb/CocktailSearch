@@ -7,7 +7,7 @@
 <br />
 <div align="center" id="readme-top">
   <a href="https://github.com/dariustb/cocktailsearch">
-    <img src="docs/images/cs_logo.svg" alt="CS Logo">
+    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/ba54af101584055.5f21f1fe40eb6.png" height=100 alt="CS Logo">
   </a>
 
   <h1 align="center">Cocktail Search</h1>
