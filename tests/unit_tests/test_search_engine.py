@@ -1,6 +1,6 @@
 ''' test_search_engine.py - unit tests for search_engine.py '''
 
-# pylint: disable = W0621
+# pylint: disable=E0401, W0621
 
 import pytest
 
