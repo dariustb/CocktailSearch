@@ -20,7 +20,11 @@
                     <h2 class="font-julius text-[24px] tracking-[0.5em]" >Top-Class Variety</h2>
                     <h1 class="font-judson text-[128px] leading-[8rem]" data-aos="zoom-out" data-aos-duration="1000"><i>The High Ball<br>Collection</i></h1>
                     <!-- <h1 class="font-judson text-[128px]"><i></i></h1> -->
-                    <h2 class="font-julius text-[24px] tracking-[0.5em]" >View Our Catalogue</h2>
+                    <h2 class="font-julius text-[24px] tracking-[0.5em]" >
+                        <a href="{{ url_for('catalogue') }}" class="hover:text-cs-orange">
+                        View Our Catalogue
+                        </a>
+                    </h2>
                 </div>
             </div>
 
@@ -30,9 +34,9 @@
         <div class="absolute bottom-4 right-8">
             <h3 class="font-judson text-[24px]">
                 <a href="#" class="text-cs-orange">Home</a> &nbsp;·&nbsp;
-                <a href="#" class="hover:text-cs-orange">Featured</a>  &nbsp;·&nbsp;
-                <a href="#" class="hover:text-cs-orange">Catalogue</a> &nbsp;·&nbsp;
-                <a href="#" class="hover:text-cs-orange">Contact Us</a>
+                <a href="{{ url_for('featured') }}"  class="hover:text-cs-orange">Featured</a>  &nbsp;·&nbsp;
+                <a href="{{ url_for('catalogue') }}" class="hover:text-cs-orange">Catalogue</a> &nbsp;·&nbsp;
+                <a href="{{ url_for('contact') }}"   class="hover:text-cs-orange">Contact Us</a>
             </h3>
         </div>
 
