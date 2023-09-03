@@ -5,8 +5,14 @@
 
 <head>
     <title>The High Ball Collection</title>
+    
+    <!-- Main CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='/css/main.css') }}">
+    
+    <!-- Tailwind CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='/css/tailwind.css') }}">
+    
+    <!-- Ainmate on Scroll CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 </head>
 
@@ -14,6 +20,7 @@
 {% block body %}
 {% endblock %}
 
+<!-- Animate on Scroll JS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init();
