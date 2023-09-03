@@ -4,7 +4,6 @@ from flask            import Flask
 from flask            import render_template
 from py.database      import Database
 from py.search_engine import SearchEngine
-from py.date          import get_date
 
 if __name__ == '__main__':
     # Set up database
@@ -20,20 +19,16 @@ if __name__ == '__main__':
         ''' Home page route'''
         return render_template('index.html')
 
-    @app.route('/featured')
-    def featured():
-        ''' Featured page route '''
-        return render_template('featured.html', current_date=get_date())
-
+    @app.route('/recipe')
     @app.route('/catalogue')
     def catalogue():
         ''' Catalogue page route '''
         return render_template('catalogue.html')
 
-    @app.route('/contact')
-    def contact():
-        ''' Contact page route '''
-        return render_template('contact.html')
+    @app.route('/recipe/<cocktail>')
+    def recipe(cocktail):
+        ''' Recipe page route '''
+        return render_template('recipe.html', cocktail=cocktail)
 
     # Run flask app
     app.run(debug=True)
