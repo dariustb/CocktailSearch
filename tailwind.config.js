@@ -9,6 +9,11 @@ module.exports = {
         'cs-brown':  '#403d39',
         'cs-black':  '#252422',
         'cs-orange': '#eb5e28',
+      },
+      fontFamily: {
+        'judson': ['Judson', 'serif'],
+        'julius': ['Julius Sans One', 'sans serif'],
+        'open':   ['Open Sans', 'sans serif']
       }
     },
   },
