@@ -1,8 +1,10 @@
 ''' app.py - Driver file for the application '''
 
 from flask            import Flask
+from flask            import render_template
 from py.database      import Database
 from py.search_engine import SearchEngine
+from py.date          import get_date
 
 if __name__ == '__main__':
     # Set up database
@@ -16,22 +18,22 @@ if __name__ == '__main__':
     @app.route('/')
     def index():
         ''' Home page route'''
-        return 'Home page'
+        return render_template('index.html')
 
     @app.route('/featured')
     def featured():
         ''' Featured page route '''
-        return 'Cocktail of the day'
+        return render_template('featured.html', current_date=get_date())
 
     @app.route('/catalogue')
     def catalogue():
         ''' Catalogue page route '''
-        return 'Cocktail catalogue'
+        return render_template('catalogue.html')
 
     @app.route('/contact')
     def contact():
         ''' Contact page route '''
-        return 'Contact page'
+        return render_template('contact.html')
 
     # Run flask app
     app.run(debug=True)
