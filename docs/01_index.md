@@ -12,17 +12,12 @@ nav_order: 1
 # Search your favorite cocktail recipe!
 {: .fs-9 }
 
-The High Ball makes the job of finding your drink of choice an easy and fun experience!
+Cocktail Search makes the job of finding your drink of choice an easy and fun experience!
 {: .fs-6 .fw-300 }
 
-[Get started now](getting-started.md){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[Get started now](./02_getting_started.md){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [View it on GitHub][repo]{: .btn .fs-5 .mb-4 .mb-md-0 }
 
-----
-
-## Special Thanks
-
-More details to come!
 
 [repo]: https://github.com/dariustb/CocktailSearch/
 [docs]: https://dariustb.github.io/CocktailSearch/
