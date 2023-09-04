@@ -19,7 +19,6 @@ if __name__ == '__main__':
         ''' Home page route'''
         return render_template('index.html')
 
-    @app.route('/recipe')
     @app.route('/catalogue')
     def catalogue():
         ''' Catalogue page route '''
