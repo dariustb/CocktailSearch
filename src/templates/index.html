@@ -1,0 +1,46 @@
+<!-- index.html - Home page -->
+
+{% extends 'base.html' %}
+
+{% block body %}
+<section class="text-cs-white bg-[url('https://images.pexels.com/photos/7376795/pexels-photo-7376795.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1282&dpr=1')]">
+
+    <!-- Brown shader -->
+    <div class="absolute inset-0 bg-cs-brown opacity-50"></div>
+
+    <!-- Contents -->
+    <div class="flex items-center justify-center h-screen">
+
+        <!-- Relative so the absolute div inside is positioned relative to it -->
+        <div class="relative">
+
+            <!-- Top-Class/High Ball/Catalogue Title -->
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center whitespace-nowrap"> <!-- This div separates each text line -->
+                    <h2 class="font-julius text-[24px] tracking-[0.5em]" >Top-Class Variety</h2>
+                    <h1 class="font-judson text-[128px] leading-[8rem]" data-aos="zoom-out" data-aos-duration="1000"><i>The High Ball<br>Collection</i></h1>
+                    <!-- <h1 class="font-judson text-[128px]"><i></i></h1> -->
+                    <h2 class="font-julius text-[24px] tracking-[0.5em]" >
+                        <a href="{{ url_for('catalogue') }}" class="hover:text-cs-orange">
+                        View Our Catalogue
+                        </a>
+                    </h2>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Hyperlink footer -->
+        <div class="absolute bottom-4 right-8">
+            <h3 class="font-judson text-[24px]">
+                <a href="#" class="underline text-cs-orange">Home</a> &nbsp;·&nbsp;
+                <a href="{{ url_for('featured') }}"  class="hover:text-cs-orange">Featured</a>  &nbsp;·&nbsp;
+                <a href="{{ url_for('catalogue') }}" class="hover:text-cs-orange">Catalogue</a> &nbsp;·&nbsp;
+                <a href="{{ url_for('contact') }}"   class="hover:text-cs-orange">Contact Us</a>
+            </h3>
+        </div>
+
+    </div>
+
+</section>
+{% endblock %}

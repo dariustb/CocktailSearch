@@ -1,0 +1,52 @@
+<!-- featured.html - Cocktail of the Day page -->
+
+{% extends 'base.html' %}
+
+{% block body %}
+<!-- <h2>Featured</h2>
+<h1>Cocktail of the Day</h1>
+<h2>{{ current_date }}</h2> -->
+<section class="bg-cs-white text-cs-brown">
+
+    <div class="flex h-screen">
+        <!-- Left half of the screen -->
+        <div class="flex w-1/2 h-screen items-center justify-center">
+            <!-- Featured image -->
+            <div> <!-- This div separates the image & credit -->
+                <img src="https://www.allrecipes.com/thmb/1ZIlTsXlHhAKNGMzR5wBoUAHzmE=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/162397-classic-old-fashioned-mfs85-b0fa981d1e794b3da99e260d56c38f33.jpg" alt="Old Fashioned Cocktail" class="">
+                <p class="font-open text-[14px]"><br>Photo: Meridith Food Studio</p>
+            </div>
+        </div>
+
+        <!-- Right half -->
+        <div class="w-1/2 h-screen text-right">
+        <!-- <div class="top-4 right-2 "> -->
+            <!-- Featured header -->
+            <div class="relative top-16 right-16">
+                <br>
+                <h3 class="font-julius text-[16px] tracking-[0.5em] text-cs-beige">Featured</h3>
+                <h2 class="font-judson text-[36px]"><i>Cocktail of the Day</i></h2>
+                <h3 class="font-julius text-[16px] tracking-[0.5em] text-cs-beige">{{ current_date }}</h3>
+                <!-- Featured Drink -->
+                <h1 class="font-judson text-[96px]">The Old Fashioned</h1>
+                <p class="font-open text-[20px] space-y-[50px] leading-[50px]">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Vestibulum lorem sed risus ultricies tristique nulla aliquet enim tortor
+                    Et magnis dis parturient montes nascetur ridiculus.
+                    Lorem mollis aliquam ut porttitor leo.
+                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames.
+                    Tristique sollicitudin nibh sit amet.
+                    Aenean vel elit scelerisque mauris pellentesque pulvinar.
+                    Turpis egestas maecenas pharetra convallis posuere.
+                    Ut tellus elementum sagittis vitae et leo.
+                    Tincidunt id aliquet risus feugiat in.
+
+                    <br><br>
+                    <b>Get the recipe:</b> <a href="#" class="underline hover:text-cs-orange">Old Fashioned</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</section>
+{% endblock %}

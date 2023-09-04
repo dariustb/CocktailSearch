@@ -1,0 +1,50 @@
+<!-- recipe.html - This page hosts the individual recipe for the cocktail -->
+
+{% extends 'base.html' %}
+
+{% block body %}
+<section class="bg-cs-white text-cs-brown h-screen">
+    <!-- Page Title -->
+    <div class="text-center relative top-16">
+        <h3 class="font-julius text-[16px] tracking-[0.5em] text-cs-beige">Recipes</h3>
+        <h2 class="font-judson text-[64px]"><i>Old Fashioned Recipe</i></h2>
+
+        <!-- Split into left/right section -->
+        <div class="flex my-10 mx-8">
+            <!-- Left Side -->
+            <div class="flex w-1/2 justify-center">
+                <!-- Featured image -->
+                <img src="https://www.allrecipes.com/thmb/Vej6x9B7_x28tDPaRN4CBQg0XHc=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/classic-old-fashioned-45046e3f716349a088c87374ccbf7916.jpg" alt="Old Fashioned Cocktail">
+            </div>
+
+            <!-- Right Side -->
+            <div class="w-1/2 mx-16 text-left">
+                <!-- Description -->
+                <p class="font-open text-[20px] space-y-[50px]">
+                    An old fashioned is a classic whiskey cocktail with bitters, simple syrup, and fruit. Experts believe the drink is called the "old fashioned" because it's one of the first widely known cocktails ever. The name comes from people ordering the drink the "old-fashioned way.
+                </p>
+                <br><br>
+                <!-- Ingredients -->
+                <h3 class="font-judson text-[36px] ">Ingredients</h3>
+                <p class="font-open text-[20px] space-y-[50px]">
+                    2 teaspoons simple syrup <br>
+                    1 teaspoon water <br>
+                    2 dashes bitters <br>
+                    1 cup ice cubes <br>
+                    1 (1.5 fluid ounce) jigger bourbon whiskey <br>
+                    1 slice orange <br>
+                    1 maraschino cherry
+                </p>
+                <br><br>
+                <!-- Directions -->
+                <h3 class="font-judson text-[36px] ">Directions</h3>
+                <p class="font-open text-[20px] space-y-[50px]">
+                    Pour simple syrup, water, and bitters into a whiskey glass; stir to combine. <br>
+                    Add ice cubes and pour in bourbon. <br>
+                    Garnish with orange slice and maraschino cherry. <br>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

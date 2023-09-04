@@ -162,3 +162,10 @@ cython_debug/
 # SQLite binaries
 *.db
 sqlite3.exe
+
+# Tailwind generated files
+src/static/css/output.css
+src/static/css/tailwind.css
+
+# npm stuff
+node_modules/

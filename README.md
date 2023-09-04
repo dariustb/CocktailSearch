@@ -36,12 +36,15 @@ _Please [refer to the documentation][docs] for the full breakdown and logic expl
 
 ### Built With
 * ![Python][python.io]
+* ![Flask][flask.io]
 * ![SQLite3][sqlite.io]
 * ![TailwindCSS][tailwind.css]
+* ![Figma][figma.io]
 
 ### Prerequisites
 * [Python 3][python] (3.11.0 or greater)
   * [pip 3][python] (versions 22.3 - 23.0.1)
+* [npm][npm] (9.5.1 or greater)
 
 ### Install Dependencies
 ```sh
@@ -76,6 +79,7 @@ pylint src/ tests/
 <!-- Technologies -->
 [vscode]:   https://code.visualstudio.com/
 [python]:   https://www.python.org/
+[npm]:      https://www.npmjs.com/
 
 <!-- Featured images -->
 [product-screenshot]:   #
@@ -90,5 +94,7 @@ pylint src/ tests/
 
 <!-- Markdown Badges -->
 [python.io]:    https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54
+[flask.io]:     https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white
 [sqlite.io]:    https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white
 [tailwind.css]: https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white
+[figma.io]:     https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white

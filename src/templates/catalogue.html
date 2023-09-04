@@ -1,0 +1,74 @@
+<!-- catalogue.html - Cocktail catalogue page -->
+
+{% extends 'base.html' %}
+
+{% block body %}
+<section class="bg-cs-white text-cs-brown h-screen">
+    <!-- Page Title -->
+    <div class="text-center relative top-16">
+        <h3 class="font-julius text-[16px] tracking-[0.5em] text-cs-beige">Catalogue</h3>
+        <h2 class="font-judson text-[64px]"><i>Cocktail Catalogue</i></h2>
+
+        <!-- Filters / Search bar -->
+        <br><br>
+        <form>
+            <div class="relative">
+                <input  type="search" id="cocktail-search" class="font-open bg-cs-white border border-t-0 border-r-0 border-l-0 border-spacing-5" placeholder="&nbsp;Search" required> 
+                <button type="submit" class="hover:bg-cs-beige">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15" height="15" viewBox="0,0,256,256">
+                        <g fill="#403d39" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8.53333,8.53333)"><path d="M13,3c-5.511,0 -10,4.489 -10,10c0,5.511 4.489,10 10,10c2.39651,0 4.59738,-0.85101 6.32227,-2.26367l5.9707,5.9707c0.25082,0.26124 0.62327,0.36648 0.97371,0.27512c0.35044,-0.09136 0.62411,-0.36503 0.71547,-0.71547c0.09136,-0.35044 -0.01388,-0.72289 -0.27512,-0.97371l-5.9707,-5.9707c1.41266,-1.72488 2.26367,-3.92576 2.26367,-6.32227c0,-5.511 -4.489,-10 -10,-10zM13,5c4.43012,0 8,3.56988 8,8c0,4.43012 -3.56988,8 -8,8c-4.43012,0 -8,-3.56988 -8,-8c0,-4.43012 3.56988,-8 8,-8z"></path></g></g>
+                    </svg>
+                </button>
+            </div>
+        </form>
+        <!-- TODO: Add filters and search bar here -->
+        <hr class="h-px my-8 bg-cs-beige border-0">
+
+        <!-- Results -->
+        <div class="flex justify-center relative">
+            <div class="w-[1240px]">
+                <!-- Section Divider -->
+                <div class="flex justify-center relative">
+                    <hr class="h-px w-full my-8 bg-cs-beige border-0">
+                    <h4 class="absolute font-julius bg-cs-white text-[20px] tracking-[0.5em] leading-[4rem]">&nbsp;Whiskey Cocktails&nbsp;</h4>
+                </div>
+                
+                <!-- Result List -->
+                <div class="grid grid-cols-2 gap-[40px]">
+                    {% for item in range(8) %}
+                    <!-- Results Cards -->
+                    <div class="flex w-[600px] h-[250px] bg-cs-white drop-shadow-[0_8px_8px_rgba(0,0,0,0.25)] shadow relative">
+                        <!-- Left half -->
+                        <div class="flex w-5/12">
+                            <!-- Thumbnail image -->
+                            <img height="250" width="250" src="https://www.allrecipes.com/thmb/Vej6x9B7_x28tDPaRN4CBQg0XHc=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/classic-old-fashioned-45046e3f716349a088c87374ccbf7916.jpg">
+                        </div>
+
+                        <!-- Right half -->
+                        <div class="flex w-7/12 top-6 mx-8 relative text-left">
+                            <div> <!-- This div separates each line of text -->
+                                <!-- Base/Type -->
+                                <h4 class="font-julius text-[14px] tracking-[0.5em] text-cs-brown">Whiskey</h4>
+                                <!-- Drink Name -->
+                                <h2 class="font-judson text-[36px] text-cs-black leading-none"><i>Old Fashioned</i></h2>
+
+                                <hr class="h-px my-2 w-[100px] bg-cs-black border-0">
+
+                                <!-- Description -->
+                                <p class="font-open text-[16px] text-cs-brown">
+                                    An old fashioned is a classic whiskey cocktail with bitters, simple syrup, and fruit. Experts believe the drink is called the "old fashioned" because it's one ...
+                                </p>
+
+                                <!-- Link to recipe -->
+                                <p class="absolute bottom-8 right-0 font-julius text-[14px] tracking-[0.5em] text-cs-orange underline">View Recipe</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
