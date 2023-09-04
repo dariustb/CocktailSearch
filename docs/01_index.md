@@ -3,11 +3,11 @@ layout: default
 title: Home
 permalink: /
 has_children: false
-has_toc: true
+has_toc: false
 nav_order: 1
 ---
 
-![Cocktail Search logo](../images/cs_logo.svg)
+<img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/ba54af101584055.5f21f1fe40eb6.png" height="200px">
 
 # Search your favorite cocktail recipe!
 {: .fs-9 }
