@@ -3,15 +3,18 @@ markdown: kramdown
 remote_theme: just-the-docs/just-the-docs
 
 # Site settings
-title: Cocktail Recipe Book
+title: Cocktail Search App
 
 # Aux links for the upper right navigation
 aux_links:
-  "Cocktail Recipe Book on GitHub":
-    - "//github.com/dariustb/RecipeBook"
+  "Cocktail Search on GitHub":
+    - "//github.com/dariustb/CocktailSearch"
 
 # Callouts (warning and notes)
 callouts:
   warning:
     title: Warning
     color: red
+
+# Set a path/url to a favicon that will be displayed by the browser
+favicon_ico: "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/ba54af101584055.5f21f1fe40eb6.png"
