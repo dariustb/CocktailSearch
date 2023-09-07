@@ -3,11 +3,16 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<section class="bg-cs-white text-cs-brown h-screen">
+<section class="text-cs-brown">
+    <!-- Page Loader -->
+    <div class="loader-wrapper flex justify-center items-center">
+        <div class="chaotic-orbit" size="5" color="#ff00ff"></div>
+    </div>
+
     <!-- Page Title -->
     <div class="text-center relative top-16">
         <h3 class="font-julius text-[16px] tracking-[0.5em] text-cs-beige">Catalogue</h3>
-        <h2 class="font-judson text-[64px]"><i>Cocktail Catalogue</i></h2>
+        <h2 class="font-judson text-[64px]" data-aos="zoom-out" data-aos-duration="1000"><i>Cocktail Catalogue</i></h2>
 
         <!-- Filters / Search bar -->
         <br><br>
@@ -29,9 +34,10 @@
             <div class="w-[1240px]">
                 <!-- Section Divider -->
                 <div class="flex justify-center relative">
-                    <hr class="h-px w-full my-8 bg-cs-beige border-0">
+                    <hr class="h-px w-full my-8 bg-cs-beige border-0" data-aos="zoom-in" data-aos-duration="3000">
                     <h4 class="absolute font-julius bg-cs-white text-[20px] tracking-[0.5em] leading-[4rem]">&nbsp;Whiskey Cocktails&nbsp;</h4>
                 </div>
+                <br>
                 
                 <!-- Result List -->
                 <div class="grid grid-cols-2 gap-[40px]">
