@@ -25,8 +25,8 @@ if __name__ == '__main__':
         ''' Catalogue page route '''
         return render_template('catalogue.html')
 
-    @app.route('/recipe/<cocktail>')
-    def recipe(cocktail):
+    @app.route('/recipe/{cocktail}')
+    def recipe(cocktail='mojito'):
         ''' Recipe page route '''
         return render_template('recipe.html', cocktail=cocktail)
 

@@ -3,12 +3,12 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<section class="text-cs-brown">
-    <!-- Page Loader -->
-    <div class="loader-wrapper flex justify-center items-center">
-        <div class="chaotic-orbit" size="5" color="#ff00ff"></div>
-    </div>
+<!-- Page Loader -->
+<div class="loader-wrapper flex justify-center items-center">
+    <div class="chaotic-orbit" size="5" color="#ff00ff"></div>
+</div>
 
+<section id="catalogue" class="text-cs-brown loader-hidden">
     <!-- Page Title -->
     <div class="text-center relative top-16">
         <h3 class="font-julius text-[16px] tracking-[0.5em] text-cs-beige">Catalogue</h3>
@@ -43,7 +43,7 @@
                 <div class="grid grid-cols-2 gap-[40px]">
                     {% for item in range(8) %}
                     <!-- Results Cards -->
-                    <div class="flex w-[600px] h-[250px] bg-cs-white drop-shadow-[0_8px_8px_rgba(0,0,0,0.25)] shadow relative">
+                    <div class="flex w-[600px] h-[250px] bg-cs-white drop-shadow-[0_8px_8px_rgba(0,0,0,0.25)] shadow relative" data-aos="fade-up" data-aos-duration="1000">
                         <!-- Left half -->
                         <div class="flex w-5/12">
                             <!-- Thumbnail image -->
@@ -66,7 +66,7 @@
                                 </p>
 
                                 <!-- Link to recipe -->
-                                <p class="absolute bottom-8 right-0 font-julius text-[14px] tracking-[0.5em] text-cs-orange underline">View Recipe</p>
+                                <a href="{{ url_for('recipe', cocktail='mojito') }}" class="absolute bottom-8 right-0 font-julius text-[14px] tracking-[0.5em] text-cs-orange underline hover:text-cs-brown">View Recipe</a>
 
                             </div>
                         </div>
@@ -77,4 +77,22 @@
         </div>
     </div>
 </section>
+
+<!-- JQuery -->
+<script>
+    // $(".loader-wrapper").show().delay(3000).hide();
+    $(window).on("load",function() {
+        setTimeout(function() {
+            $(".loader-wrapper").fadeOut("slow");
+        }, 1000);
+    });
+    // $("section#catalogue").hide().delay(3000).show();
+    $(window).ready(function() {
+        setTimeout(function() {
+            $("section#catalogue").fadeIn("slow");
+            // Init AOS after JQuery animations
+            AOS.init();
+        }, 1500);
+    });
+</script>
 {% endblock %}
