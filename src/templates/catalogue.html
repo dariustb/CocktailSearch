@@ -26,7 +26,6 @@
                 </button>
             </div>
         </form>
-        <!-- TODO: Add filters and search bar here -->
         <hr class="h-px my-8 bg-cs-beige border-0">
         <!-- Results -->
         <div class="flex justify-center relative">
@@ -49,7 +48,7 @@
                         <!-- Left half -->
                         <div class="flex w-5/12">
                             <!-- Thumbnail image -->
-                            <img height="250" width="250" src="{{ drink['image'] }}">
+                            <img height="250" width="250" src="{{ drink['image'] }}" class="object-cover">
                         </div>
 
                         <!-- Right half -->
@@ -68,7 +67,7 @@
                                 </p>
 
                                 <!-- Link to recipe -->
-                                <a href="{{ url_for('recipe', cocktail='mojito') }}" class="absolute bottom-8 right-0 font-julius text-[14px] tracking-[0.5em] text-cs-orange underline hover:text-cs-brown">View Recipe</a>
+                                <a href="{{ url_for('recipe', drink_name=drink['name'].lower().replace(' ','-')) }}" class="absolute bottom-8 right-0 font-julius text-[14px] tracking-[0.5em] text-cs-orange underline hover:text-cs-brown">View Recipe</a>
 
                             </div>
                         </div>
@@ -84,19 +83,17 @@
 
 <!-- JQuery -->
 <script>
-    // $(".loader-wrapper").show().delay(3000).hide();
     $(window).on("load",function() {
         setTimeout(function() {
             $(".loader-wrapper").fadeOut("slow");
-        }, 1000);
+        }, 750);
     });
-    // $("section#catalogue").hide().delay(3000).show();
     $(window).ready(function() {
         setTimeout(function() {
             $("section#catalogue").fadeIn("slow");
             // Init AOS after JQuery animations
             AOS.init();
-        }, 1500);
+        }, 1250);
     });
 </script>
 {% endblock %}
