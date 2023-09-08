@@ -4,3 +4,18 @@
 
 /* Import Google fonts - Judson Serif, Julius Sans One, Open Sans */
 @import url('https://fonts.googleapis.com/css2?family=Judson:ital@0;1&family=Julius+Sans+One&family=Open+Sans:ital,wght@0,300;1,300&display=swap');
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.no-overflow {
+    overflow: hidden;
+}

@@ -15,6 +15,18 @@ class SearchEngine:
         query = input('Enter cocktail to search: ')
         return query.title()
 
+    def get_all_cocktails(self) -> list:
+        ''' Returns all drinks in database '''
+        # command = 'SELECT * from cocktails ORDER BY base, name'
+        command = 'SELECT * FROM cocktails WHERE id >= 1 AND id <=10'
+        return self.d_db.sql_command(command)
+
+    def get_all_bases(self) -> list:
+        ''' Returns all bases in database '''
+        # command = 'SELECT DISTINCT base from cocktails ORDER BY base'
+        command = 'SELECT DISTINCT base from cocktails WHERE id >= 1 AND id <=10 ORDER BY base'
+        return self.d_db.sql_command(command)
+
     def search_cocktail(self, cocktail_name: str) -> list:
         ''' Makes a search through a given database file '''
         command = f'SELECT * FROM cocktails WHERE name LIKE \'%{cocktail_name}%\''

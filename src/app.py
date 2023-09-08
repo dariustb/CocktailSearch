@@ -4,6 +4,7 @@ from flask            import Flask
 from flask            import render_template
 from py.database      import Database
 from py.search_engine import SearchEngine
+from py               import constants as const
 
 if __name__ == '__main__':
     # Set up database
@@ -17,20 +18,21 @@ if __name__ == '__main__':
     @app.route('/')
     def index():
         ''' Home page route'''
-        return render_template('index.html')
+        return render_template('index.html', background=const.BACKGROUND_VIDEO)
 
     @app.route('/catalogue')
     def catalogue():
         ''' Catalogue page route '''
-        return render_template('catalogue.html')
+        Recipe_db.open()
+        drink_list = Search.get_all_cocktails()
+        base_list  = Search.get_all_bases()
+        Recipe_db.close()
+        return render_template('catalogue.html', drink_list=drink_list, base_list=base_list)
 
-    @app.route('/recipe/<cocktail>')
-    def recipe(cocktail):
+    @app.route('/recipe/{cocktail}')
+    def recipe(cocktail='mojito'):
         ''' Recipe page route '''
         return render_template('recipe.html', cocktail=cocktail)
 
     # Run flask app
     app.run(debug=True)
-
-    # Tear down functions
-    Recipe_db.close_connection()
