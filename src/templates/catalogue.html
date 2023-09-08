@@ -26,7 +26,6 @@
                 </button>
             </div>
         </form>
-        <!-- TODO: Add filters and search bar here -->
         <hr class="h-px my-8 bg-cs-beige border-0">
         <!-- Results -->
         <div class="flex justify-center relative">
@@ -68,7 +67,7 @@
                                 </p>
 
                                 <!-- Link to recipe -->
-                                <a href="{{ url_for('recipe', cocktail='mojito') }}" class="absolute bottom-8 right-0 font-julius text-[14px] tracking-[0.5em] text-cs-orange underline hover:text-cs-brown">View Recipe</a>
+                                <a href="{{ url_for('recipe', drink_name=drink['name'].lower().replace(' ','-')) }}" class="absolute bottom-8 right-0 font-julius text-[14px] tracking-[0.5em] text-cs-orange underline hover:text-cs-brown">View Recipe</a>
 
                             </div>
                         </div>
