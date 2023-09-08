@@ -15,6 +15,7 @@ class Database:
     def open(self) -> None:
         ''' Start sql connection safely '''
         self.d_connection             = sqlite3.connect(const.SQL_DB_PATH)
+        self.d_connection.row_factory = sqlite3.Row
         self.d_cursor                 = self.d_connection.cursor()
 
     def close(self) -> None:
