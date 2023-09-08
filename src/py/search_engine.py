@@ -27,7 +27,7 @@ class SearchEngine:
         command = 'SELECT DISTINCT base from cocktails WHERE id >= 1 AND id <=10 ORDER BY base'
         return self.d_db.sql_command(command)
 
-    def search_cocktail(self, cocktail_name: str) -> list:
+    def search_cocktail(self, cocktail_name: str):
         ''' Makes a search through a given database file '''
         command = f'SELECT * FROM cocktails WHERE name LIKE \'%{cocktail_name}%\''
-        return self.d_db.sql_command(command)
+        return self.d_db.sql_command(command)[0]

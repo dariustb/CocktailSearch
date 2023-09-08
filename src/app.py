@@ -29,10 +29,13 @@ if __name__ == '__main__':
         Recipe_db.close()
         return render_template('catalogue.html', drink_list=drink_list, base_list=base_list)
 
-    @app.route('/recipe/{cocktail}')
-    def recipe(cocktail='mojito'):
+    @app.route('/recipe/<drink_name>')
+    def recipe(drink_name):
         ''' Recipe page route '''
-        return render_template('recipe.html', cocktail=cocktail)
+        Recipe_db.open()
+        drink = Search.search_cocktail(drink_name.replace('-', ' '))
+        Recipe_db.close()
+        return render_template('recipe.html', drink_name=drink_name, drink=drink)
 
     # Run flask app
     app.run(debug=True)
