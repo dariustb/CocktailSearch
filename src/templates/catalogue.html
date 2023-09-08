@@ -28,41 +28,43 @@
         </form>
         <!-- TODO: Add filters and search bar here -->
         <hr class="h-px my-8 bg-cs-beige border-0">
-
         <!-- Results -->
         <div class="flex justify-center relative">
             <div class="w-[1240px]">
-                <!-- Section Divider -->
-                <div class="flex justify-center relative">
+                {% for base in base_list %}
+                <!-- Base Section Divider -->
+                <br>
+                <div class="flex justify-center relative" data-aos="fade-up" data-aos-duration="1000">
                     <hr class="h-px w-full my-8 bg-cs-beige border-0" data-aos="zoom-in" data-aos-duration="3000">
-                    <h4 class="absolute font-julius bg-cs-white text-[20px] tracking-[0.5em] leading-[4rem]">&nbsp;Whiskey Cocktails&nbsp;</h4>
+                    <h4 class="absolute font-julius bg-cs-white text-[20px] tracking-[0.5em] leading-[4rem]">&nbsp;{{ base[0] }} Cocktails&nbsp;</h4>
                 </div>
                 <br>
                 
                 <!-- Result List -->
                 <div class="grid grid-cols-2 gap-[40px]">
-                    {% for item in range(8) %}
+                    {% for drink in drink_list %}
+                    {% if drink[2] == base[0] -%}
                     <!-- Results Cards -->
                     <div class="flex w-[600px] h-[250px] bg-cs-white drop-shadow-[0_8px_8px_rgba(0,0,0,0.25)] shadow relative" data-aos="fade-up" data-aos-duration="1000">
                         <!-- Left half -->
                         <div class="flex w-5/12">
                             <!-- Thumbnail image -->
-                            <img height="250" width="250" src="https://www.allrecipes.com/thmb/Vej6x9B7_x28tDPaRN4CBQg0XHc=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/classic-old-fashioned-45046e3f716349a088c87374ccbf7916.jpg">
+                            <img height="250" width="250" src="{{ drink[3] }}">
                         </div>
 
                         <!-- Right half -->
                         <div class="flex w-7/12 top-6 mx-8 relative text-left">
                             <div> <!-- This div separates each line of text -->
                                 <!-- Base/Type -->
-                                <h4 class="font-julius text-[14px] tracking-[0.5em] text-cs-brown">Whiskey</h4>
+                                <h4 class="font-julius text-[14px] tracking-[0.5em] text-cs-brown">{{ drink[2] }}</h4>
                                 <!-- Drink Name -->
-                                <h2 class="font-judson text-[36px] text-cs-black leading-none"><i>Old Fashioned</i></h2>
+                                <h2 class="font-judson text-[36px] text-cs-black leading-none"><i>{{ drink[1] }}</i></h2>
 
                                 <hr class="h-px my-2 w-[100px] bg-cs-black border-0">
 
                                 <!-- Description -->
                                 <p class="font-open text-[16px] text-cs-brown">
-                                    An old fashioned is a classic whiskey cocktail with bitters, simple syrup, and fruit. Experts believe the drink is called the "old fashioned" because it's one ...
+                                    {{ drink[4][:150] }}...
                                 </p>
 
                                 <!-- Link to recipe -->
@@ -71,8 +73,10 @@
                             </div>
                         </div>
                     </div>
+                    {% endif %}
                     {% endfor %}
                 </div>
+                {% endfor %}
             </div>
         </div>
     </div>

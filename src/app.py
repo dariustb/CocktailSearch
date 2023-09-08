@@ -23,7 +23,11 @@ if __name__ == '__main__':
     @app.route('/catalogue')
     def catalogue():
         ''' Catalogue page route '''
-        return render_template('catalogue.html')
+        Recipe_db.open()
+        drink_list = Search.get_all_cocktails()
+        base_list  = Search.get_all_bases()
+        Recipe_db.close()
+        return render_template('catalogue.html', drink_list=drink_list, base_list=base_list)
 
     @app.route('/recipe/{cocktail}')
     def recipe(cocktail='mojito'):
@@ -32,6 +36,3 @@ if __name__ == '__main__':
 
     # Run flask app
     app.run(debug=True)
-
-    # Tear down functions
-    Recipe_db.close_connection()
