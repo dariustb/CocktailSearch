@@ -84,13 +84,11 @@
 
 <!-- JQuery -->
 <script>
-    // $(".loader-wrapper").show().delay(3000).hide();
     $(window).on("load",function() {
         setTimeout(function() {
             $(".loader-wrapper").fadeOut("slow");
         }, 1000);
     });
-    // $("section#catalogue").hide().delay(3000).show();
     $(window).ready(function() {
         setTimeout(function() {
             $("section#catalogue").fadeIn("slow");
