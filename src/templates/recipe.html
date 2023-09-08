@@ -12,7 +12,7 @@
     <!-- Page Title -->
     <div class="text-center relative top-16">
         <h3 class="font-julius text-[16px] tracking-[0.5em] text-cs-beige">Recipes</h3>
-        <h2 class="font-judson text-[64px]"><i>{{ drink['name'] }} Recipe</i></h2>
+        <h2 class="font-judson text-[64px]" data-aos="zoom-out" data-aos-duration="1000"><i>{{ drink['name'] }} Recipe</i></h2>
 
         <!-- Split into left/right section -->
         <div class="flex my-10 mx-8">
@@ -30,7 +30,7 @@
                 </p>
                 <br><br>
                 <!-- Ingredients -->
-                <h3 class="font-judson text-[36px] ">Ingredients</h3>
+                <h3 class="font-judson text-[36px]">Ingredients</h3>
                 <p class="font-open text-[20px] space-y-[50px]">
                     {% for line in drink['ingredients'].split('\\n') %}
                     • {{ line }}<br>
@@ -38,7 +38,7 @@
                 </p>
                 <br><br>
                 <!-- Directions -->
-                <h3 class="font-judson text-[36px] ">Directions</h3>
+                <h3 class="font-judson text-[36px]">Directions</h3>
                 <p class="font-open text-[20px] space-y-[50px]">
                     {% for line in drink['directions'].split('\\n') %}
                     • {{ line }}<br>
