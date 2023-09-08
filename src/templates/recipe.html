@@ -3,7 +3,12 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<section class="bg-cs-white text-cs-brown h-screen">
+<!-- Page Loader -->
+<div class="loader-wrapper flex justify-center items-center">
+    <div class="chaotic-orbit" size="5" color="#ff00ff"></div>
+</div>
+
+<section id="recipe" class="bg-cs-white text-cs-brown h-screen loader-hidden">
     <!-- Page Title -->
     <div class="text-center relative top-16">
         <h3 class="font-julius text-[16px] tracking-[0.5em] text-cs-beige">Recipes</h3>
@@ -14,7 +19,7 @@
             <!-- Left Side -->
             <div class="flex w-1/2 justify-center">
                 <!-- Featured image -->
-                <img src="{{ drink['image'] }}" alt="{{ drink['name'] }} Cocktail">
+                <img src="{{ drink['image'] }}" alt="{{ drink['name'] }} Cocktail" class="drop-shadow-lg">
             </div>
 
             <!-- Right Side -->
@@ -43,4 +48,20 @@
         </div>
     </div>
 </section>
+
+<!-- JQuery -->
+<script>
+    $(window).on("load",function() {
+        setTimeout(function() {
+            $(".loader-wrapper").fadeOut("slow");
+        }, 500);
+    });
+    $(window).ready(function() {
+        setTimeout(function() {
+            $("section#recipe").fadeIn("slow");
+            // Init AOS after JQuery animations
+            AOS.init();
+        }, 1000);
+    });
+</script>
 {% endblock %}
