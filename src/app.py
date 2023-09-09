@@ -27,7 +27,9 @@ if __name__ == '__main__':
         drink_list = Search.get_all_cocktails()
         base_list  = Search.get_all_bases()
         Recipe_db.close()
-        return render_template('catalogue.html', drink_list=drink_list, base_list=base_list)
+        return render_template('catalogue.html',
+                               drink_list=drink_list,
+                               base_list=base_list)
 
     @app.route('/recipe/<drink_name>')
     def recipe(drink_name):
