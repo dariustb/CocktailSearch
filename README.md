@@ -6,14 +6,12 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center" id="readme-top">
-  <a href="https://github.com/dariustb/cocktailsearch">
-    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/ba54af101584055.5f21f1fe40eb6.png" height=100 alt="CS Logo">
-  </a>
-
   <h1 align="center">Cocktail Search</h1>
 
+  https://github.com/dariustb/CocktailSearch/assets/33665856/8808751b-d328-4189-a68e-9250016f49d4
+
   <p align="center">
-    Python web app to search cocktail recipes via SQL queries
+    Python web app to search cocktail recipes via SQLite queries
     <br />
     <a href="https://dariustb.github.io/CocktailSearch/"><strong>Explore the docs »</strong></a>
     <br />
