@@ -26,7 +26,7 @@ class SearchEngine:
         ''' Makes an exact search in database'''
         command = f'SELECT * FROM cocktails WHERE name = \'{query.title()}\''
         return self.d_db.sql_command(command)[0]
-    
+
     def search_similar(self, query: str) -> list:
         ''' Makes a LIKE search in database'''
         command = f'SELECT * FROM cocktails WHERE name LIKE \'%{query}%\' ORDER BY base'
