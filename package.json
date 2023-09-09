@@ -5,6 +5,6 @@
   "scripts": {
     "tailwind":   "npx tailwindcss -i ./src/static/css/main.css -o ./src/static/css/tailwind.css",
     "tailwind-w": "npx tailwindcss -i ./src/static/css/main.css -o ./src/static/css/tailwind.css --watch",
-    "tests": "python -m pytest tests/ && pylint src/app.py src/py tests/"
+    "tests":      "python -m pytest tests/ && pylint src/app.py src/py tests/"
   }
 }
