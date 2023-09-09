@@ -7,7 +7,8 @@ from py.search_engine import SearchEngine
 if __name__ == '__main__':
     # Set up database
     Recipe_db = Database()
-    Search    = SearchEngine(Recipe_db)
+    Recipe_db.build_database()
+    Search = SearchEngine(Recipe_db)
 
     # Set up Flask server
     app = Flask(__name__)
