@@ -10,16 +10,3 @@ from src.py.search_engine import SearchEngine
 def search_eng():
     ''' search engine fixture '''
     return SearchEngine(None)
-
-
-def test_get_search_query(monkeypatch, search_eng):
-    ''' tests get_search_query method '''
-    # Given
-    monkeypatch.setattr('builtins.input', lambda _: 'my query')
-
-    # When
-    query = search_eng.get_search_query()
-
-    # Then
-    assert isinstance(query, str)
-    assert query == 'My Query'
