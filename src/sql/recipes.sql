@@ -4,12 +4,12 @@
 -- Create cocktails table
 CREATE TABLE IF NOT EXISTS cocktails (
   id INTEGER PRIMARY KEY,
-  name        VARCHAR(20) NOT NULL,
-  base        VARCHAR(10) NOT NULL,
-  image       VARCHAR(40) NOT NULL,
+  name        VARCHAR(20)  NOT NULL,
+  base        VARCHAR(10)  NOT NULL,
+  image       VARCHAR(40)  NOT NULL,
   description VARCHAR(500) NOT NULL,
-  ingredients TEXT NOT NULL,
-  directions  TEXT NOT NULL
+  ingredients TEXT         NOT NULL,
+  directions  TEXT         NOT NULL
 );
 
 -- Populate table with drink information
