@@ -14,6 +14,9 @@ module.exports = {
         'judson': ['Judson', 'serif'],
         'julius': ['Julius Sans One', 'sans serif'],
         'open':   ['Open Sans', 'sans serif']
+      },
+      backgroundImage: {
+        'header-image': "url('https://images.pexels.com/photos/4667141/pexels-photo-4667141.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&dpr=1')"
       }
     },
   },

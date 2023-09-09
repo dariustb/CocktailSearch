@@ -4,7 +4,6 @@ from flask            import Flask
 from flask            import render_template
 from py.database      import Database
 from py.search_engine import SearchEngine
-from py               import constants as const
 
 if __name__ == '__main__':
     # Set up database
@@ -18,7 +17,7 @@ if __name__ == '__main__':
     @app.route('/')
     def index():
         ''' Home page route'''
-        return render_template('index.html', background=const.BACKGROUND_VIDEO)
+        return render_template('index.html')
 
     @app.route('/catalogue')
     def catalogue():
